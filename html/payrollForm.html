@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <link href="https://fonts.googleappis.com/css2?family = Roboto:wght@300;400;500;600$display=swap" rel="stylesheet">
@@ -11,19 +10,64 @@
 <body>
     <header class="header-content header">
         <div class="logo-conent">
-            <img src="../assets/logo.png" alt="">
+            <img src="../assets/logo.png" alt="Employee Payroll">
             <div>
                 <span class="emp-text">EMPLOYEE</span>
                 <span class="emp-text emp-payroll">PAYROLL</span>
             </div>
         </div>
     </header>
-    <div class="form" action="#" onsubmit="save(event); return false">
-        <div class="form-head">Employee payroll form</div>
-        <div class="row-content">
-            <label class="label text" for="name">Name</label>
-            <input class="input" type="text" id="name" name="name" placeholder="your name..." required>
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save(event); return false">
+            <div class="form-head">Employee payroll form</div>
+            <div class="row-content">
+                <label class="label text" for="name">Name</label>
+                <input class="input" type="text" id="name" name="name" placeholder="your name..." required>
+            </div>
+    <div class="row-content">
+        <label class="label text" for="gender">Gender</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label class="text" for="male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label type="text" for="female">Female</label>
         </div>
     </div>
+    <div class="row-content">
+        <label class="label text" for="emailId">Email</label>
+        <input class="input" type="text" id="email" name="email" placeholder="your email..." required>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="Department">Department</label>
+        <div class="checkboxDiv">
+            <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+            <label class="text" for="hr">HR</label>
+            <input class="checkbox" type="checkbox" id="sales" name="department" value="SALES">
+            <label class="text" for="sales">Sales</label>
+            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Finance">
+            <label class="text" for="finance">Finance</label>
+            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+            <label class="text" for="enfineer">Engineer</label>
+            <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+            <label class="text" for="others">Others</label>
+        </div>
+    </div>
+    <div class="row-content">
+        <label class="label text" for="salary">Choose your salary:</label>
+        <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+        <output class="salary-output text" for="salary">400000</output>
+    </div>
+    <div class="buttonParent">
+        <a href="Home.html" class ="resetButton button cancelButton">Cancel</a>
+        <div class="submit-reset">
+            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+            <button type="reset" class="resetButton button">Reset</button>
+        </div>
+    </div>
+
+    </form>
+    </div>
+
 </body>
+
 </html>
