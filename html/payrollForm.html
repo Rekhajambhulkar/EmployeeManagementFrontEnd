@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/payrollForm.css">
-        <title>Employee Form</title>
-    </head>
-    <body>
-        <header class="header-content header">
-            <div class="logo-content">
-                <img src="../assets/logo.png" alt="Employee Payroll">
-                <div>
-                    <span class="emp-text">EMPLOYEE</span>
-                    <span class="emp-text emp-payroll">FORM</span>
-                </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payrollForm.css">
+    <title>Employee Form</title>
+    <script src="../js/Employee.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/logo.png" alt="Employee Payroll">
+            <div>
+                <span class="emp-text">EMPLOYEE</span>
+                <span class="emp-text emp-payroll">FORM</span>
             </div>
-        </header>
+        </div>
+    </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event); return false">
+        <form class="form" onsubmit="save(event); return false">
             <div class="form-head">Employee Registration Form</div>
             <div class="row-content">
-                <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="your name..." required>
+                <label class="label text" for="name">FirstName</label>
+                <input class="input" type="text" id="fname" name="name" placeholder="your Firstname..." >
             </div>
-    <div class="row-content">
-        <label class="label text" for="gender">Gender</label>
-        <div>
-            <input type="radio" id="male" name="gender" value="male">
-            <label class="text" for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label type="text" for="female">Female</label>
-        </div>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="emailId">Email</label>
-        <input class="input" type="text" id="email" name="email" placeholder="your email..." required>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="Department">Department</label>
-        <div class="checkboxDiv">
-            <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
-            <label class="text" for="hr">HR</label>
-            <input class="checkbox" type="checkbox" id="sales" name="department" value="SALES">
-            <label class="text" for="sales">Sales</label>
-            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Finance">
-            <label class="text" for="finance">Finance</label>
-            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
-            <label class="text" for="enfineer">Engineer</label>
-            <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
-            <label class="text" for="others">Others</label>
-        </div>
-    </div>
-    <div class="row-content">
-        <label class="label text" for="salary">Choose your salary:</label>
-        <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-        <output class="salary-output text" for="salary">400000</output>
-    </div>
-    <div class="buttonParent">
-        <a href="Home.html" class ="resetButton button cancelButton">Cancel</a>
-        <div class="submit-reset">
-            <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-            <button type="reset" class="resetButton button">Reset</button>
-        </div>
-    </div>
+            <div class="row-content">
+                <label class="label text" for="name">LastName</label>
+                <input class="input" type="text" id="lname" name="name" placeholder="your Lastname..." >
+            </div>
+            <div class="row-content">
+                <label class="label text" for="emailId">Email</label>
+                <input class="input" type="text" id="email" name="email" placeholder="your email...">
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Salary</label>
+                <input class="input" type="text" id="salary" name="salary" placeholder="your salary...">
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <input class="input" type="text" id="department" name="department">
+            </div>
+            
+            <div class="buttonParent">
+                <div class="submit-reset">
+                    <button type="submit" onclick="save();" value="save" class="button submitButton">Submit</button>
+                </div>
+            </div>
 
-    </form>
+        </form>
     </div>
-
 </body>
-
 </html>
